@@ -19,7 +19,7 @@ import sys
 
 files = []
 path = sys.path[0]   # Place this in the folder from which you want to extract .txt files.
-fileNames = []
+file_names = []
 labels = []
 
 times = []
@@ -28,11 +28,11 @@ temps = []
 
 # Open all .txt files in the directory.
 def open_files():
-    for fileName in os.listdir(path):
-        if fileName.endswith(".txt"):
-            fileNames.append(fileName)
-            filePath = path + "/" + fileName
-            f = open(filePath, "r")
+    for file_name in os.listdir(path):
+        if file_name.endswith(".txt"):
+            file_names.append(file_name)
+            file_path = path + "/" + file_name
+            f = open(file_path, "r")
             files.append(f)
 
 
@@ -56,14 +56,14 @@ def plot():
     ax.set_title(name)
     ax.set_xlabel('time (min)')
     ax.set_ylabel('Temp (deg C)')
-    # This fileName is the repository in which your graphs will be stored
-    fileName = path + "/"  # The graph will be produced in the same folder as the .txt files and this script.
+    # This file_name is the repository in which your graphs will be stored
+    file_name = path + "/"  # The graph will be produced in the same folder as the .txt files and this script.
 
-    if not os.path.isdir(fileName):
-        os.makedirs(fileName)
+    if not os.path.isdir(file_name):
+        os.makedirs(file_name)
 
-    fileName += name + ".png"
-    fig.savefig(fileName)
+    file_name += name + ".png"
+    fig.savefig(file_name)
     plt.show()
 
 
