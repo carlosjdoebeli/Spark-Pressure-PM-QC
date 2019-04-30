@@ -138,6 +138,7 @@ for line in dataList:
 plt.axhline(y=minimum_pressure, linewidth=0.5, linestyle = ':', color = 'r')
 plt.axhline(y=maximum_pressure, linewidth = 0.5, linestyle = ':', color = 'r')
 plt.savefig(str(name) + ".png")
+# plt.savefig(time_str + ".png")            # Use this if timestamp is desired in the graph file name.
 plt.show()
 
 
