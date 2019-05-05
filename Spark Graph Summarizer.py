@@ -21,7 +21,6 @@ files = []
 path = sys.path[0]   # Place this in the folder from which you want to extract .txt files.
 file_names = []
 labels = []
-
 times = []
 temps = []
 
